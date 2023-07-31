@@ -11,6 +11,22 @@ Terra Station Wallet extension allows users to:
 - Send tokens to another Terra wallet.
 - Swap currencies on the Terra network at the effective exchange rate.
 
+## Install nodejs version 16 in ubuntu 20.04
+
+This command will add PPA sources required to be able to install NodeJS 16 on your Ubuntu 20.04 installation
+```
+curl -s https://deb.nodesource.com/setup_16.x | sudo bash
+```
+Now that the PPA source has been added, we can install NodeJS 16 on our Ubuntu 20.04 installation. Run the following command:
+```
+sudo apt install nodejs -y
+```
+Finally, let's confirm the installed version. Run the following command:
+```
+node -v
+```
+
+
 ## Building Terra Station Wallet extension
 
 This project was bootstrapped with [Create React App](https://create-react-app.dev/).
