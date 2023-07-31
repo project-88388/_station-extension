@@ -17,13 +17,25 @@ This command will add PPA sources required to be able to install NodeJS 16 on yo
 ```
 curl -s https://deb.nodesource.com/setup_16.x | sudo bash
 ```
-Now that the PPA source has been added, we can install NodeJS 16 on our Ubuntu 20.04 installation. Run the following command:
+Now that the PPA source has been added, we can install to install Node.js 16.x and npm on our Ubuntu 20.04 installation. Run the following command:
+
 ```
-sudo apt install nodejs -y
+sudo apt-get install -y nodejs
+```
+## You may also need development tools to build native addons:
+```
+     sudo apt-get install gcc g++ make
+```
+## To install the Yarn package manager, run:
+```
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+     echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
 ```
 Finally, let's confirm the installed version. Run the following command:
 ```
 node -v
+npm -v
 ```
 
 
